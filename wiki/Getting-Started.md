@@ -41,6 +41,7 @@ You can open the following formats.
 - .ustx: OpenUtau project file
 - .ust: UTAU project file
 - .vsqx: VOCALOID3/4 project file
+- .svp: Synthesizer V project file
 - .mid/.midi: General music score file
 - [.ufdata](https://github.com/sdercolin/utaformatix-data): [UtaFormatix](https://sdercolin.github.io/utaformatix3/)'s internal data format. Compatible with most vocal synthesis project files.
 - .musicxml: A universal music score file format for handling Western music staff notation as data.
@@ -75,7 +76,7 @@ Click the **+** icon in the left panel to create a new track.
 ### Importing tracks
 Imported tracks will be added to the current project under all of your existing tracks.
 
-You can import tracks from `.ustx`, `.ust`, and `.vsqx` files using **File > Import Tracks**.  
+You can import tracks from `.ustx`, `.ust`, `.vsqx`, and `.svp` files using **File > Import Tracks**.  
 You can import audio from `.wav`, `.mp3`, `.ogg`, and `.flac` files using **File > Import Audio**.  
 You can import tracks MIDI using **File > Import MIDI**.
 
@@ -131,12 +132,15 @@ To zoom vertically, hover your cursor over the vertical zoom icon and scroll.
 ### Transcribe audio to notes
 OpenUtau can autometically transcribe wave parts to note parts.
 
-Before using, please download the model from [here](https://github.com/xunmengshe/OpenUtau/releases/download/0.0.0.0/some-0.0.1.oudep) and install it using "Tools → Install Dependency (.oudep)"
+Before using, please download either the model for "Some" or "GAME" from the Package Manager (Tools → Packages)
 
-Right click on a wave part and click "Transcribe audio to create a note part". The transcription process takes about 1 minute.
+note that GAME has configuration options and handles notes better. 
+
+Right click on a wave part and click "Transcribe audio to create a note part". The transcription process will take time, depending on computer strength, and audio length. 
+
 
 The model is trained on clean solo vocal, so it works best on this kind of audio. It may not work well on music with instrumental or with heavy reverberation.
-
+If you want to extract pitch, you can install RMVPE in the Package Manager as well. 
 ## Notes
 Toggle tips using the question mark button or pressing `T` on the keyboard.
 
@@ -202,10 +206,13 @@ Please see [Expressions (Flags)](/Expressions-%28Flags%29/).
 
 ### Edit pitchbends
 You can show/hide pitchbends using the pitchbend icon in the top left, or by pressing `I` on your keyboard. Hidden pitchbends will still be applied to the notes.
+You can also edit pitchbends with the Pitch Point Tool 
 
 ![show hide pitchbends](https://i.imgur.com/atuJhyF.gif)
 
 Click on the pitchbend to create new points. Drag the point to move it around.
+
+![show pitch point tool] (https://i.imgur.com/3yZUSVA.gif)
 
 ![create pitchbend](https://i.imgur.com/pBvL2sD.gif)
 
@@ -246,9 +253,9 @@ Drag the top left corner to adjust the overlap amount. Right click on the circle
 
 ![overlap](https://i.imgur.com/reLOTps.gif)
 
-## Beta version
-OpenUtau provides two release channels: stable and beta. Sometimes you may want to use the beta version to try out new features, or because you encountered a bug in stable version. 
+## Beta/Alpha version
+OpenUtau provides three release channels: stable, beta, and alpha. Sometimes you may want to use the beta, or alpha version to try out new features, or because you encountered a bug in stable version. 
 
-To switch to the beta version, go to "Tools → Preferences", turn on "Beta", and check for update.
+To switch to to a different version, go to "Tools → Preferences", turn on "Beta" / "Alpha", and check for update.
 
-If the method above doesn't work, you can also manually download the latest beta version from https://github.com/openutau/OpenUtau/releases
+If the method above doesn't work, you can also manually download the latest beta / alpha version from https://github.com/openutau/OpenUtau/releases
